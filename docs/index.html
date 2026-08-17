@@ -7,6 +7,12 @@
   <meta name="description" content="온톨로지 기초부터 Neo4j 지식그래프, GraphRAG, AI 통합까지 — HR안내봇 실전 프로젝트로 배우는 기술 리더를 위한 가이드">
   <title>온톨로지 실전 입문</title>
   <style>
+  /* 모바일 사파리는 화면보다 넓은 블록의 글자를 제 나름대로 키운다.
+     표가 옆으로 스크롤될 때 긴 열만 부풀어 같은 표 안에서 열마다 글자
+     크기가 달라 보인다. 지정한 크기를 그대로 쓰게 한다. none이 아니라
+     100%다 — none은 독자가 키운 글자 크기 설정까지 막는다. */
+  html{-webkit-text-size-adjust:100%; text-size-adjust:100%}
+
     :root{--bg:#fafaf8;--fg:#1a1a1a;--accent:#0d7a5f;--muted:#6b7280;--border:#e5e5e0;--code-bg:#f3f3ee;--toc-bg:#fff;--max-w:740px}
     @media(prefers-color-scheme:dark){:root{--bg:#171717;--fg:#e5e5e5;--accent:#34d399;--muted:#9ca3af;--border:#2e2e2e;--code-bg:#1e1e1e;--toc-bg:#1c1c1c}}
     *{box-sizing:border-box;margin:0;padding:0}html{font-size:18px;scroll-behavior:smooth}
