@@ -1,8 +1,8 @@
-# Build Log — 온톨로지 실전 입문 v1.0.0
+# Build Log — 온톨로지 실전 입문 v1.0.1
 
-- **Date:** 2026-08-29T06:20:56Z
-- **Output:** `온톨로지-실전-입문-v1.0.0.epub`
-- **Size:** 150391 bytes
+- **Date:** 2026-11-01T00:12:27Z
+- **Output:** `온톨로지-실전-입문-v1.0.1.epub`
+- **Size:** 150250 bytes
 - **Pandoc exit:** 0
 - **epubcheck:** passed
 - **epubcheck strict:** 1
@@ -14,7 +14,7 @@
 - title: 온톨로지 실전 입문
 - author: 김상기
 - language: ko
-- version: 1.0.0
+- version: 1.0.1
 - pub_date: 2026-05-01
 - identifier: urn:uuid:e8c22a68-829e-41d4-98e9-ec5fa4c1061a
 - license: CC BY-NC-SA 4.0
