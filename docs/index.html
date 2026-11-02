@@ -42,6 +42,7 @@
     .back-top{position:fixed;bottom:2rem;right:2rem;width:42px;height:42px;background:var(--accent);color:#fff;border:none;border-radius:50%;font-size:1.2rem;cursor:pointer;opacity:0;transition:opacity .3s;display:flex;align-items:center;justify-content:center}
     .back-top.show{opacity:.8}.back-top:hover{opacity:1}
     @media(max-width:860px){.wrapper{flex-direction:column}nav#TOC{position:relative;top:0;width:100%;max-height:none;border-right:none;border-bottom:1px solid var(--border);border-radius:0}main{padding:1.5rem 1rem 4rem}.hero{padding:3rem 1rem 2.5rem}.hero h1{font-size:1.8rem}}
+    @media(max-width:860px){main table{display:block;max-width:100%;overflow-x:auto}}
   </style>
 </head>
 <body>
@@ -343,12 +344,15 @@ id="toc-마무리-당신의-첫-번째-그래프를-응원하며">마무리 — 
 <h2 id="저자">저자</h2>
 <p>김상기</p>
 <h2 id="판권">판권</h2>
-<p><strong>온톨로지 실전 입문</strong> <strong>판본:</strong> v1.0.1
-<strong>발행일:</strong> 2026-05-01 (초판), 2026-11-01 (v1.0.1)
-<strong>저자:</strong> 김상기 <strong>식별자:</strong>
+<p><strong>온톨로지 실전 입문</strong> <strong>판본:</strong> v1.0.2
+<strong>발행일:</strong> 2026-05-01 (초판), 2026-11-01 (v1.0.1),
+2026-11-02 (v1.0.2) <strong>저자:</strong> 김상기
+<strong>식별자:</strong>
 urn:uuid:e8c22a68-829e-41d4-98e9-ec5fa4c1061a</p>
 <h3 id="판-이력">판 이력</h3>
 <ul>
+<li>v1.0.2 (2026-11-02): 정합 보정 — 테스트 시나리오 수(1장 20개 중 8장
+대표 13개) 관계를 8·9·11장에 명시, 글자 있는 새 표지</li>
 <li>v1.0.1 (2026-11-01): 문체 점검 — AI 문체 패턴 73곳 정리, 내용·수치
 변경 없음</li>
 <li>v1.0.0 (2026-05-01): 초판</li>
@@ -5084,7 +5088,8 @@ HYBRID)</td>
 </tr>
 <tr>
 <td>시나리오 테스트</td>
-<td>완료 — 13개 시나리오 (구조적 4, 텍스트 3, 분석 3, 복합 3)</td>
+<td>완료 — 1장의 20개 중 대표 13개 시나리오 (구조적 4, 텍스트 3, 분석 3,
+복합 3)</td>
 </tr>
 <tr>
 <td>프로토타입 수준</td>
@@ -5099,10 +5104,10 @@ HYBRID)</td>
 <hr />
 <h1 id="장.-지식그래프-품질-관리-테스트-검증-진화">9장. 지식그래프 품질
 관리 — 테스트, 검증, 진화</h1>
-<p>8장에서 HR안내봇 프로토타입이 동작하는 것을 확인했다. 20개 시나리오
-대부분에서 그럴듯한 답변이 나온다. “육아휴직 중 연차는 어떻게
-되나요?”라는 질문에 온톨로지 기반 그래프를 탐색해 정확한 답을 내놓는
-모습을 보면, 프로젝트가 거의 끝난 것 같다.</p>
+<p>8장에서 HR안내봇 프로토타입이 동작하는 것을 확인했다. 1장의 20개
+시나리오에서 뽑은 대표 질문 대부분에서 그럴듯한 답변이 나온다. “육아휴직
+중 연차는 어떻게 되나요?”라는 질문에 온톨로지 기반 그래프를 탐색해
+정확한 답을 내놓는 모습을 보면, 프로젝트가 거의 끝난 것 같다.</p>
 <p>그런데 한 달 뒤를 상상해보자. 인사팀에서 재택근무 정책을 새로
 발표했다. 조직 개편으로 부서 세 개가 합쳐졌다. 퇴직한 팀장의 보고 관계가
 그래프에 그대로 남아 있다. 누군가 “재택근무 신청은 어떻게 하나요?”라고
@@ -5276,7 +5281,7 @@ RETURN &#39;connectivity&#39; AS metric,
 잘못하거나, 리트리버가 엉뚱한 컨텍스트를 가져오는 경우다. 그래서 답변
 품질 평가는 별도로 필요하다.</p>
 <h3 id="정확도correctness">정확도(Correctness)</h3>
-<p>가장 직관적인 지표다. 정답이 있는 질문 세트(8장에서 만든 20개
+<p>가장 직관적인 지표다. 정답이 있는 질문 세트(1장에서 정의한 20개
 시나리오)에 대해, 답변이 사실적으로 맞는지 평가한다. “인사팀 팀장은
 누구인가?”에 “박영희”라고 답했는데 실제로는 “이정수”라면 오답이다.</p>
 <p>정확도 평가에는 두 가지 접근이 있다. 사람이 직접 채점하는 방법과,
@@ -5475,9 +5480,10 @@ FlexibleWorkPolicy 사이에 appliesTo 관계 추가” 같은 제안을 내놓�
 관리 실전</h2>
 <p>지금까지 다룬 내용을 HR안내봇 프로젝트에 구체적으로 적용해보자.</p>
 <h3 id="답변-정확도-평가-체계-구축">답변 정확도 평가 체계 구축</h3>
-<p>8장에서 만든 20개 시나리오를 골든 데이터셋으로 삼고, 여기에 30개를 더
-추가하여 총 50개의 평가 세트를 구성한다. 각 질문에 대해 기대 답변과 근거
-경로를 명시해둔다.</p>
+<p>1장에서 정의한 20개 시나리오(8장에서는 이 중 대표 13개로
+테스트했다)를 골든 데이터셋으로 삼고, 여기에 30개를 더 추가하여 총
+50개의 평가 세트를 구성한다. 각 질문에 대해 기대 답변과 근거 경로를
+명시해둔다.</p>
 <pre><code>Q: 김철수의 매니저가 관리하는 정책은?
 A: [육아휴직규정, 연차규정, 복리후생안내]
 Path: 김철수 → REPORTS_TO → 박영희 → MANAGES_POLICY → [정책들]</code></pre>
@@ -6514,9 +6520,9 @@ LLM이 생성하는 답변의 신뢰도를 높이려면, 구조화된 지식 기
 <p><strong>7장</strong>에서 AI와 지식그래프를 연결하는 네 가지 패턴을
 비교하고, HR안내봇에 가장 적합한 Graph-Enhanced RAG 패턴을 선택했다.
 하이브리드 RAG 아키텍처의 설계를 완료했다.</p>
-<p><strong>8장</strong>에서 모든 것을 조합하여 HR안내봇을 완성했다. 20개
-시나리오로 검증하고, 멀티홉 추론과 GDS 기반 분석 질문에도 답변하는
-프로토타입을 손에 쥐었다.</p>
+<p><strong>8장</strong>에서 모든 것을 조합하여 HR안내봇을 완성했다.
+1장의 20개 시나리오에서 뽑은 대표 13개로 검증하고, 멀티홉 추론과 GDS
+기반 분석 질문에도 답변하는 프로토타입을 손에 쥐었다.</p>
 <p><strong>9장</strong>에서 품질 관리 체계를 세웠다. 추론기로 온톨로지를
 검증하고, 네 가지 메트릭으로 데이터 품질을 측정하며, 온톨로지 진화를
 관리하는 프로세스를 정의했다. LLM이 새 정책 문서에서 온톨로지 변경을
