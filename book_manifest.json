@@ -3,7 +3,7 @@
   "subtitle": "Neo4j와 AI로 지식그래프 시스템 만들기",
   "author": "김상기",
   "language": "ko",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "chapters": [
     "머리말",
     "1장. 왜 지식그래프인가",
@@ -20,5 +20,6 @@
     "에필로그"
   ],
   "pub_date": "2026-05-01",
-  "identifier": "urn:uuid:e8c22a68-829e-41d4-98e9-ec5fa4c1061a"
+  "identifier": "urn:uuid:e8c22a68-829e-41d4-98e9-ec5fa4c1061a",
+  "rights": "© 2026 김상기. Licensed under CC BY-NC-SA 4.0"
 }
